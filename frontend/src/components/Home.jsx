@@ -29,7 +29,7 @@ const Home = () => {
         <CategoryCarousel />
       </div>
       
-      <div className="bg-pink-100 pt-8">
+      <div className="bg-red-50 pt-8">
         <LatestJobs />
       </div>
       <Footer />

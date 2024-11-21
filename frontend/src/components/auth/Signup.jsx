@@ -85,7 +85,7 @@ const Signup = () => {
             <div className="flex items-center justify-center max-w-7xl mx-auto">
                 <form
                     onSubmit={submitHandler}
-                    className="w-1/2 bg-red-300 bg-opacity-85 border border-gray-200 rounded-md p-4 my-10 animate-fade-in"
+                    className="w-1/2 bg-red-100 bg-opacity-85 border border-gray-200 rounded-md p-4 my-10 animate-fade-in"
                 >
                     <h1 className="font-bold text-xl mb-5">Sign Up</h1>
                     <div className="my-2">
