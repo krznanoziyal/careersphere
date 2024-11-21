@@ -29,7 +29,7 @@ const Navbar = () => {
         }
     }
     return (
-        <div className='bg-white'>
+        <div className='bg-purple-500 text-white'> 
             <div className='flex items-center justify-between mx-auto max-w-7xl h-16'>
                 <div>
                     <h1 className='text-2xl font-bold'>Career<span className='text-[#F83002]'>Sphere</span></h1>
@@ -44,20 +44,41 @@ const Navbar = () => {
                                 </>
                             ) : (
                                 <>
-                                    <li><Link to="/">Home</Link></li>
-                                    <li><Link to="/jobs">Jobs</Link></li>
-                                    <li><Link to="/browse">Browse</Link></li>
+                                    <li className='relative group'>
+                                        <Link to="/" className="text-white transition duration-300 ease-out">
+                                            Home
+                                            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#411910] scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 origin-bottom-right group-hover:origin-bottom-left"></span>
+                                        </Link>
+                                    </li>
+                                    <li className='relative group'>
+                                        <Link to="/jobs" className="text-white transition duration-300 ease-out">
+                                            Jobs
+                                            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#411910] scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 origin-bottom-right group-hover:origin-bottom-left"></span>
+                                        </Link>
+                                    </li>
+                                    <li className='relative group'>
+                                        <Link to="/browse" className="text-white transition duration-300 ease-out">
+                                            Browse
+                                            <span className="absolute bottom-0 left-0 w-full h-[2px] bg-[#411910] scale-x-0 group-hover:scale-x-100 transform transition-transform duration-300 origin-bottom-right group-hover:origin-bottom-left"></span>
+                                        </Link>
+                                    </li>
                                 </>
                             )
                         }
-
-
                     </ul>
                     {
                         !user ? (
                             <div className='flex items-center gap-2'>
-                                <Link to="/login"><Button variant="outline">Login</Button></Link>
-                                <Link to="/signup"><Button className="bg-[#6A38C2] hover:bg-[#5b30a6]">Signup</Button></Link>
+                                <Link to="/login">
+                                    <Button className="transform transition-transform duration-300 hover:scale-105 border-2 border-white text-white">
+                                        Login
+                                    </Button>
+                                </Link>
+                                <Link to="/signup">
+                                    <Button className="transform transition-transform duration-300 hover:scale-105 bg-[#42207b] hover:bg-[#291350] text-white">
+                                        Signup
+                                    </Button>
+                                </Link>
                             </div>
                         ) : (
                             <Popover>

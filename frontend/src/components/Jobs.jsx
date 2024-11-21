@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'  //jobs section main or after login
 import Navbar from './shared/Navbar'
 import FilterCard from './FilterCard'
 import Job from './Job';
@@ -27,7 +27,8 @@ const Jobs = () => {
     return (
         <div>
             <Navbar />
-            <div className='max-w-7xl mx-auto mt-5'>
+            <div className='bg-red-50'>
+            <div className='max-w-7xl mx-auto mt-5 '>
                 <div className='flex gap-5'>
                     <div className='w-20%'>
                         <FilterCard />
@@ -55,6 +56,7 @@ const Jobs = () => {
                 </div>
             </div>
 
+            </div>
 
         </div>
     )
